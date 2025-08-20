@@ -25,12 +25,23 @@ class Myapp extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                color: Colors.grey[200],
-                border: Border.all(),
+                color: Colors.black,
+                border: Border.all(color: Colors.white),
               ),
-              )
+              ),
+              SizedBox(height: 50),
+              Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
+              SizedBox(height: 10),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                color: Colors.black,
+                border: Border.all(color: Colors.white),
+              ),
+              ),
 
-            ],
+            ], 
 
           ),
 
