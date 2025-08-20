@@ -1,4 +1,4 @@
-import 'package:app/features/Cubit/Estados.dart';
+import 'package:app/features/cubit/Estados.dart';
 import 'package:bloc/bloc.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -17,7 +17,7 @@ class Manejadordeestados extends Cubit<EstadoCentral> {
     Modelo data = Modelo(info);
     emit(EstadoExitoso(data));
     } else{
-      emit(EstadosFallo());
+      emit(EstadoFallo());
     }
   }  
 }
