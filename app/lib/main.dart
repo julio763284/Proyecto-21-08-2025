@@ -1,6 +1,8 @@
+import 'package:app/features/cubit/cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:app/features/Widgets/Vistas1cuadro.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 void main(){
   runApp(Myapp());
 }
@@ -10,7 +12,7 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Homepage();
+    return BlocProvider(create: (_) => Manejadordeestados(), child: const Homepage(),);
     
   }
 }
@@ -32,8 +34,8 @@ class Homepage extends StatelessWidget {
           padding: const EdgeInsets.all(40),
           child: Column(
             children: [
-               Text("Empresa 1" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
-               SizedBox(height: 10),
+               const Text("Empresa 1" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
+               const SizedBox(height: 10),
                Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(16),
@@ -41,13 +43,12 @@ class Homepage extends StatelessWidget {
                 color: Colors.black,
                 border: Border.all(color: Colors.white),
               ),
-              child: Cuadro1() ,
               ),
               
             
-              SizedBox(height: 50),
-              Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
-              SizedBox(height: 10),
+              const SizedBox(height: 20),
+              const Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
+              const SizedBox(height: 10),
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(16),
