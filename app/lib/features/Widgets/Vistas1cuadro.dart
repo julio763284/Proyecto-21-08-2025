@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:app/features/cubit/Estados.dart';
 import 'package:app/features/cubit/cubit.dart';
 
+
+
 class Cuadro1 extends StatelessWidget {
   const Cuadro1({super.key});
 
@@ -21,7 +23,63 @@ class Cuadro1 extends StatelessWidget {
         } else {
           return _builtFailure();
         }
+
+
       },
+    );
+  }
+
+  Widget _builtinitial(){
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        Text("nombre_aplicacion   :  _________________________"),
+        Text("fundacion           :  _________________________"),
+        Text("sede                :  _________________________"),
+        Text("Valor_en_el_mercado :  _________________________"),
+        ],
+        
+      ),
+    );
+  }
+
+  Widget _builtloading(){
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        Text("nombre_aplicacion   :  _________________________"),
+        Text("fundacion           :  _________________________"),
+        Text("sede                :  _________________________"),
+        Text("Valor_en_el_mercado :  _________________________"),
+        ],
+        
+      ),
+    );
+  }
+
+  Widget _builtSuccess(EstadoExitoso state){
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        Text("nombre_aplicacion   :  _________________________"),
+        Text("fundacion           :  _________________________"),
+        Text("sede                :  _________________________"),
+        Text("Valor_en_el_mercado :  _________________________"),
+        ],
+        
+      ),
+    );
+  }
+
+   Widget _builtFailure() {
+    return Center(
+      child: Text(
+        "404 Founded ",
+        style: TextStyle(fontSize: 40, color: Colors.red),
+      ),
     );
   }
 }

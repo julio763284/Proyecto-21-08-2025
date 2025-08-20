@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
-
+import 'package:app/features/Widgets/Vistas1cuadro.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 void main(){
   runApp(Myapp());
 }
 
 class Myapp extends StatelessWidget {
   const Myapp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Homepage();
+    
+  }
+}
+
+class Homepage extends StatelessWidget {
+  const Homepage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +41,10 @@ class Myapp extends StatelessWidget {
                 color: Colors.black,
                 border: Border.all(color: Colors.white),
               ),
+              child: Cuadro1() ,
               ),
+              
+            
               SizedBox(height: 50),
               Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
               SizedBox(height: 10),
@@ -40,16 +56,15 @@ class Myapp extends StatelessWidget {
                 border: Border.all(color: Colors.white),
               ),
               ),
-
+    
             ], 
-
+    
           ),
-
+    
           ),
           
       ),
     );
-    
   }
 }
 
