@@ -9,6 +9,6 @@ class Modelo {
     nombreEmpresa = json['nombre_aplicacion'];
     fundacion = json['fundacion'];
     sede = json['sede'];
-    valorenbolsa = json['valor_en_el_mercado'];
+    valorenbolsa = json['Valor_en_el_mercado'];
   }
 }
