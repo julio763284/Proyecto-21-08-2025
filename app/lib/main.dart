@@ -42,7 +42,7 @@ class Homepage extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontStyle: FontStyle.italic,
-              fontSize: 40,
+              fontSize: 30,
             ),
           ),
           centerTitle: true,
@@ -82,7 +82,7 @@ class Homepage extends StatelessWidget {
                 child: Cuadro2(),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 onPressed: () {

@@ -32,46 +32,26 @@ class Cuadro2 extends StatelessWidget {
       children: [
         Text(
           "Nombre Empresa   :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "fundacion           :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "sede                :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "Valor en el Mercado :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
       ],
     );
   }
 
   Widget _builtloading2() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(
-          "Nombre Empresa   :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        Text(
-          "fundacion           :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        Text(
-          "sede                :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-        Text(
-          "Valor en el Mercado :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
-        ),
-      ],
-    );
+    return Center(child: CircularProgressIndicator());
   }
 
   Widget _builtSucess2(EstadoExitosobloc state) {
@@ -81,19 +61,19 @@ class Cuadro2 extends StatelessWidget {
       children: [
         Text(
           "Nombre Empresa   : ${modelo2.nombreEmpresa}",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "fundacion           : ${modelo2.fundacion}",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "sede                : ${modelo2.sede}",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "Valor en el Mercado : ${modelo2.valorenbolsa}",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
       ],
     );

@@ -32,19 +32,19 @@ class Cuadro1 extends StatelessWidget {
       children: [
         Text(
           "Nombre Empresa   :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),  
+          style: TextStyle(color: Colors.white, fontSize: 15),  
         ),
         Text(
           "fundacion           :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "sede                :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
           "Valor en el Mercado :  __________",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 15),
         ),
       ],
     );
@@ -60,13 +60,13 @@ class Cuadro1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "Nombre Empresa : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,),
+          "Nombre Empresa : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center,),
         Text(
-          "fundacion :  ${info.fundacion}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
+          "fundacion :  ${info.fundacion}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
         Text(
-          "sede :  ${info.sede}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
+          "sede :  ${info.sede}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
         Text(
-          "Valor en el mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
+          "Valor en el mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
       ],
     );
   }
