@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:app/features/model/modelo.dart';
 
 
 class EstadoCentral extends Equatable {
@@ -15,7 +16,7 @@ class EstadoCargando extends EstadoCentral {}
 class EstadoFallo extends EstadoCentral {}
 
 class EstadoExitoso extends EstadoCentral {
-  final mimodelo;
+  final Modelo mimodelo;
   EstadoExitoso(this.mimodelo);
 
 }

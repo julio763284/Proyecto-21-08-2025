@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:app/features/cubit/Estados.dart';
 import 'package:app/features/cubit/cubit.dart';
-
-
+import 'package:app/features/model/modelo.dart';
 
 class Cuadro1 extends StatelessWidget {
   const Cuadro1({super.key});
@@ -23,64 +22,57 @@ class Cuadro1 extends StatelessWidget {
         } else {
           return _builtFailure();
         }
-
-
       },
     );
   }
 
-  Widget _builtinitial(){
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        Text("nombre_aplicacion   :  _________________________"),
-        Text("fundacion           :  _________________________"),
-        Text("sede                :  _________________________"),
-        Text("Valor_en_el_mercado :  _________________________"),
-        ],
-        
-      ),
+  Widget _builtinitial() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          "nombre_aplicacion   :  _________________________",
+          style: TextStyle(color: Colors.white),
+        ),
+        Text(
+          "fundacion           :  _________________________",
+          style: TextStyle(color: Colors.white),
+        ),
+        Text(
+          "sede                :  _________________________",
+          style: TextStyle(color: Colors.white),
+        ),
+        Text(
+          "Valor_en_el_mercado :  _________________________",
+          style: TextStyle(color: Colors.white),
+        ),
+      ],
     );
   }
 
-  Widget _builtloading(){
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        Text("nombre_aplicacion   :  _________________________"),
-        Text("fundacion           :  _________________________"),
-        Text("sede                :  _________________________"),
-        Text("Valor_en_el_mercado :  _________________________"),
-        ],
-        
-      ),
+  Widget _builtloading() {
+    return Center(child: CircularProgressIndicator());
+  }
+
+  Widget _builtSuccess(EstadoExitoso state) {
+    final Modelo info = state.mimodelo;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text("nombre_aplicacion   : ${info.nombreEmpresa} "),
+        Text("fundacion           : ${info.fundacion}"),
+        Text("sede                : ${info.sede}"),
+        Text("Valor_en_el_mercado : ${info.valorenbolsa}"),
+      ],
     );
   }
 
-  Widget _builtSuccess(EstadoExitoso state){
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-        Text("nombre_aplicacion   :  _________________________"),
-        Text("fundacion           :  _________________________"),
-        Text("sede                :  _________________________"),
-        Text("Valor_en_el_mercado :  _________________________"),
-        ],
-        
-      ),
-    );
-  }
-
-   Widget _builtFailure() {
+  Widget _builtFailure() {
     return Center(
       child: Text(
-        "404 Founded ",
+        "404 Not Found ",
         style: TextStyle(fontSize: 40, color: Colors.red),
       ),
     );
   }
 }
-

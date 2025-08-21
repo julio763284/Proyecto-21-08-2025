@@ -23,7 +23,9 @@ class Homepage extends StatelessWidget {
   });
 
   @override
+  
   Widget build(BuildContext context) {
+     final appcubit = context.read<Manejadordeestados>();
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
@@ -34,7 +36,7 @@ class Homepage extends StatelessWidget {
           padding: const EdgeInsets.all(40),
           child: Column(
             children: [
-               const Text("Empresa 1" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
+               const Text("Empresa 1" ,style: TextStyle(color: Colors.white , fontSize: 30,),),
                const SizedBox(height: 10),
                Container(
                 width: double.infinity,
@@ -43,11 +45,12 @@ class Homepage extends StatelessWidget {
                 color: Colors.black,
                 border: Border.all(color: Colors.white),
               ),
+              child: Cuadro1(),
               ),
               
             
               const SizedBox(height: 20),
-              const Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 20,),),
+              const Text("Empresa 2" ,style: TextStyle(color: Colors.white , fontSize: 30,),),
               const SizedBox(height: 10),
               Container(
                 width: double.infinity,
@@ -57,6 +60,13 @@ class Homepage extends StatelessWidget {
                 border: Border.all(color: Colors.white),
               ),
               ),
+
+              const SizedBox(height: 30),
+              ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+              onPressed: () => appcubit.peticiondatos(),
+              child: const Text(" Iniciar " , style: TextStyle(color: Colors.white, fontSize: 23), ),
+            ),
     
             ], 
     
