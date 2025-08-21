@@ -12,7 +12,7 @@ class Manejadordeestados extends Cubit<EstadoCentral> {
     emit(EstadoCargando());
     final url = Uri.parse("https://gist.githubusercontent.com/julio763284/747854e8547135bdb93203aa23bb342f/raw/9c083bb2282202557e7d4797a34d422b5213e8f3/gistfile1.txt");
     final response = await http.get(url);
-    if (response.statusCode == 200) {
+    if (response.statusCode == 201) {
     final info = jsonDecode(response.body);
     Modelo data = Modelo(info);
     emit(EstadoExitoso(data));
