@@ -31,7 +31,7 @@ class Cuadro1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "nombre_aplicacion   :  __________",
+          "Nombre Empresa   :  __________",
           style: TextStyle(color: Colors.white, fontSize: 20),  
         ),
         Text(
@@ -43,7 +43,7 @@ class Cuadro1 extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
         Text(
-          "Valor_en_el_mercado :  __________",
+          "Valor en el Mercado :  __________",
           style: TextStyle(color: Colors.white, fontSize: 20),
         ),
       ],
@@ -60,13 +60,13 @@ class Cuadro1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "nombre_aplicacion : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,),
+          "Nombre Empresa : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center,),
         Text(
           "fundacion :  ${info.fundacion}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
         Text(
           "sede :  ${info.sede}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
         Text(
-          "Valor_en_el_mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
+          "Valor en el mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 20), textAlign: TextAlign.center),
       ],
     );
   }
