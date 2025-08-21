@@ -1,11 +1,11 @@
 
-class Modelo {
+class Modelo2 {
   String? nombreEmpresa;
   String? fundacion;
   String? sede;
   String? valorenbolsa;
 
-  Modelo(Map json){
+  Modelo2(Map json){
     nombreEmpresa = json['nombre_aplicacion'];
     fundacion = json['fundacion'];
     sede = json['sede'];
