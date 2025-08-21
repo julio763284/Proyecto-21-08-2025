@@ -60,15 +60,15 @@ class Cuadro2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "Nombre Empresa   : ${modelo2.nombreEmpresa}",
+          "Nombre Empresa : ${modelo2.nombreEmpresa}",
           style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
-          "fundacion           : ${modelo2.fundacion}",
+          "fundacion : ${modelo2.fundacion}",
           style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(
-          "sede                : ${modelo2.sede}",
+          "sede : ${modelo2.sede}",
           style: TextStyle(color: Colors.white, fontSize: 15),
         ),
         Text(

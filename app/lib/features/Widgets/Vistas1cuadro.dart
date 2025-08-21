@@ -60,13 +60,13 @@ class Cuadro1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          "Nombre Empresa : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center,),
+          "Nombre Empresa : ${info.nombreEmpresa}", style: TextStyle(color: Colors.white, fontSize: 15)),
         Text(
-          "fundacion :  ${info.fundacion}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
+          "fundacion :  ${info.fundacion}", style: TextStyle(color: Colors.white, fontSize: 15)),
         Text(
-          "sede :  ${info.sede}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
+          "sede :  ${info.sede}", style: TextStyle(color: Colors.white, fontSize: 15)),
         Text(
-          "Valor en el mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 15), textAlign: TextAlign.center),
+          "Valor en el mercado :  ${info.valorenbolsa}", style: TextStyle(color: Colors.white, fontSize: 15)),
       ],
     );
   }
