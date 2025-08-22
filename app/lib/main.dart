@@ -17,8 +17,8 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => Manejadordeestados()),
-        BlocProvider(create: (_) => Logicabloc()),
+        BlocProvider(create: (_) => Manejadordeestados()..peticiondatos()),
+        BlocProvider(create: (_) => Logicabloc()..add(CargaEvento())),
       ],
       child: Homepage(),
     );
