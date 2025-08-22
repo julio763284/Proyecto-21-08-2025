@@ -18,9 +18,9 @@ class Cuadro1 extends StatelessWidget {
         } else if (state is EstadoExitoso) {
           return _builtSuccess(state);
         } else if (state is EstadoFallo) {
-          return _builtFailure();
+          return _builtFailure(context);
         } else {
-          return _builtFailure();
+          return _builtFailure(context);
         }
       },
     );
@@ -71,11 +71,16 @@ class Cuadro1 extends StatelessWidget {
     );
   }
 
-  Widget _builtFailure() {
+  Widget _builtFailure(BuildContext context) {
     return Center(
-      child: Text(
-        "404 Not Found ",
-        style: TextStyle(fontSize: 40, color: Colors.red),
+      child: Column(
+        children: [
+          Text("404 Not Found " ,
+          style: TextStyle(color: Colors.white),),
+          ElevatedButton(onPressed: (){
+            context.read<Manejadordeestados>().peticiondatos();
+            }, child: Text("Reintentar"))
+        ]  
       ),
     );
   }

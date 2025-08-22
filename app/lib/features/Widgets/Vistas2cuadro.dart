@@ -1,3 +1,4 @@
+import 'package:app/Features/Bloc/eventos.dart';
 import 'package:app/features/model/modelo2.dart';
 import 'package:flutter/material.dart';
 import 'package:app/features/bloc/bloc.dart';
@@ -18,9 +19,9 @@ class Cuadro2 extends StatelessWidget {
         } else if (state is EstadoExitosobloc) {
           return _builtSucess2(state);
         } else if (state is EstadoFallo) {
-          return _builtFailure2();
+          return _builtFailure2(context);
         } else {
-          return _builtFailure2();
+          return _builtFailure2(context);
         }
       },
     );
@@ -79,12 +80,15 @@ class Cuadro2 extends StatelessWidget {
     );
   }
 
-  Widget _builtFailure2() {
-    return Center(
-      child: Text(
-        "404 Not Found ",
-        style: TextStyle(fontSize: 40, color: Colors.red),
-      ),
+  Widget _builtFailure2(BuildContext context) {
+    return Column(
+      children: [
+          Text("404 Not Found " ,
+          style: TextStyle(color: Colors.white),),
+          ElevatedButton(onPressed: (){
+            context.read<Logicabloc>().add(CargaEvento());
+            }, child: Text("Reintentar"))
+        ] 
     );
   }
 }

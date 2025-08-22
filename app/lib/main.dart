@@ -17,8 +17,8 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => Manejadordeestados()),
-        BlocProvider(create: (_) => Logicabloc()),
+        BlocProvider(create: (_) => Manejadordeestados()..peticiondatos()),
+        BlocProvider(create: (_) => Logicabloc()..add(CargaEvento())),
       ],
       child: Homepage(),
     );
@@ -30,8 +30,6 @@ class Homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appcubit = context.read<Manejadordeestados>();
-    final appbloc = context.read<Logicabloc>();
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
@@ -62,6 +60,7 @@ class Homepage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.black,
                   border: Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.circular(15)
                 ),
                 child: Cuadro1(),
               ),
@@ -78,22 +77,11 @@ class Homepage extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.black,
                   border: Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.circular(15)
                 ),
                 child: Cuadro2(),
               ),
-
               const SizedBox(height: 20),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-                onPressed: () {
-                  appcubit.peticiondatos();
-                  appbloc.add(CargaEvento());
-                },
-                child: const Text(
-                  " Iniciar ",
-                  style: TextStyle(color: Colors.white, fontSize: 23),
-                ),
-              ),
             ],
           ),
         ),
