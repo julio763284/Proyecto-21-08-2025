@@ -11,7 +11,7 @@ class Logicabloc extends Bloc<Eventos, Estadobloc> {
         emit(EstadoCargandobloc());
         await Future.delayed(Duration(seconds: 3));
         final url = Uri.parse(
-          "https://gist.githubusercontent.com/julio763284/9a5a1eb57441324f3b0c86dd01e1620a/raw/913a50c7286fbe9e433b5fad1eb2232c9f464378/2da%2520Peticion%2520Bloc",
+          "https://gist.githubusercontent.com/julio763284/db4cfff94d147185ebef34e255e94498/raw/1f540659d2da1a3914e45e690bd083fe13c71780/gistfile1.txt",
         );
         final response = await http.get(url);
         if (response.statusCode == 200) {
