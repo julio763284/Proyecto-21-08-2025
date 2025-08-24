@@ -11,7 +11,7 @@ class Manejadordeestados extends Cubit<EstadoCentral> {
   void peticiondatos() async{
     emit(EstadoCargando());
     await Future.delayed(Duration(seconds: 3));
-    final url = Uri.parse("https://gist.githubusercontent.com/julio763284/747854e8547135bdb93203aa23bb342f/raw/9c083bb2282202557e7d4797a34d422b5213e8f3/gistfile1.txt");
+    final url = Uri.parse("https://gist.githubusercontent.com/julio763284/6d3dd225515b3ce5f5fa4a15a6489ac8/raw/03cf478093e358bbf1a56deefe6437f1efd20df5/gistfile1.txt");
     final response = await http.get(url);
     if (response.statusCode == 200) {
     final info = jsonDecode(response.body);
